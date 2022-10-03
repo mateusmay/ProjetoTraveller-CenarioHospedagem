@@ -5,12 +5,13 @@
 }
 
 body{
-    font-family: 'calibri';    
+    font-family: 'Calibri';    
 }
 
 h2{
     color: #fff;
 }
+
 
 ul{
     list-style: none;
@@ -46,15 +47,29 @@ a{
 .header_menu_item{
     font-size: 1rem;
     margin: 0 10px;
-    font-weight: 200;
+    font-weight: 500;
+    padding:5px 10px ;
+    transition: background-color 1s, color 1s ;
+}
+.header_menu_item:active,
+.header_menu_item:hover{    
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;         
 }
 
-.header_menu_item:hover{
-    text-decoration: underline;
+.paragrafo{
+    
+    margin: 10vh 0 0;
+    width: 100%;
+    padding: 5vh 3vh  0;
+    font-size: 1rem;
+    font-weight: 500;
 }
+
 .cenario_hotel{
-    /* height: 88vh; */
-    margin: 40px auto;
+    margin:3vh auto;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -64,8 +79,9 @@ a{
 
 .cenario_item{
     width: 30%;
-    height: 70vh;
+    min-height: 60vh;
     margin: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +98,7 @@ a{
 }
 
 .cenario_image{
-    width: 80%;
+    width: 80%;    
     border-radius: 10px;
 }
 
@@ -92,12 +108,15 @@ a{
 
 p{
     width: 80%;
-    text-align: justify;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .rodape{
+    height: 20vh;
     display: flex;
     flex-direction:column;
+    justify-content: center;
     align-items: center;
     background-color: rgba(32, 100, 216, 0.726);
     padding: 20px 0;
@@ -121,17 +140,7 @@ p{
     color: #fff;
     font-size: 1em;
     font-weight: 900;
-}
-
-.box{
-    width: 25%;
-    height: 50%;
-    margin: 5px 0;
-    padding: 0px;
-    /* border: 1px solid #333; */
-}
-.image{
-    max-width: 100%;
+    text-align: center;
 }
 
 @media(max-width: 940px){
@@ -164,7 +173,7 @@ p{
     .links_menu{
         width: 200px;
         height: 200px;
-        padding: 1vh;
+        padding-right: 1vh;
         background-color: #000;
         position: fixed;
         right: -100vw;
@@ -177,6 +186,18 @@ p{
 
     .links_menu.open{
         right: 0;
+    }
+
+    .cenario_item{
+        width: 45%;
+    }
+}
+
+@media(max-width:450px){
+    .cenario_item{
+        width: 100%;
+        padding: 15px;
+        min-height: 30px;
     }
 
 }
